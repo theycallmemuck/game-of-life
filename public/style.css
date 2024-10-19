@@ -1,0 +1,13 @@
+:root {
+    --board-bg-color: #434343;
+    --atom-bg-color: #33cc33;
+}
+
+html, body {
+    margin: 0;
+    background-color: var(--board-bg-color);
+}
+
+.atom {
+    background-color: var(--atom-bg-color);
+}
