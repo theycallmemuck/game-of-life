@@ -117,7 +117,7 @@ class GameOfLife {
     this.grid = nextGrid;
   }
 
-  // Подсчет живых соседей
+  /** @private */
   countAliveNeighbors(row, col) {
     let count = 0;
     const directions = [
@@ -171,6 +171,7 @@ class GameOfLife {
       // use GPU instead CPU
       requestAnimationFrame(step);
     };
+
     requestAnimationFrame(step);
   }
 
@@ -196,7 +197,8 @@ class GameOfLife {
     const col = Math.floor(x / this.cellSize);
 
     this.grid[row][col] = this.grid[row][col] ? 0 : 1;
-    this.changedCells.add(`${row},${col}`); // Добавляем измененную клетку
+    // key of changed cell
+    this.changedCells.add(`${row},${col}`);
     this.drawChangedCells();
   }
 }
