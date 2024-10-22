@@ -1,1 +1,0 @@
-export const GAME_SPEED = 100; /** time in ms */
